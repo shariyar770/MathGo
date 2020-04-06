@@ -10,9 +10,18 @@ import kotlin.random.Random
 
 class GameActivity : AppCompatActivity() {
 
+    companion object{
+        const val LEVEL_COUNT=10
+        const val RIGHT_ANSWERS_COUNT="rigthAnswers"
+    }
+    var rightAnswers=0
+    var wrongAsnwers=0
     var ans = 0.0
     var schet = 0
     var tans: Double = 0.00
+    var currentLevelCount=0
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -83,25 +92,23 @@ class GameActivity : AppCompatActivity() {
 
     fun onClick (view: View) {
         val selectedAnswer = (view as Button).text.toString().toDouble()
-        if (selectedAnswer == tans) {
-            duris.visibility=View.VISIBLE
-            schet = schet + 1
-            duris.setVisibility(View.INVISIBLE)
+        if(selectedAnswer==tans){
+            rightAnswers++
+            currentLevelCount++
+        }
+        else{
+            wrongAsnwers++
+            currentLevelCount++
+        }
+        if(currentLevelCount== LEVEL_COUNT){
+            val intent  = Intent(this, GameOverActivity::class.java)
+            intent.putExtra(RIGHT_ANSWERS_COUNT,rightAnswers)
+            startActivity(intent)
+            finish()
+        }
+        else {
             generateQuestion()
-        } else {
-            val xat = Intent(this, GameOverActivity::class.java)
-            startActivity(xat)
-            finish()
         }
-
-        schet_btn.text = schet.toString()
-
-        if (schet == 10) {
-            val xat = Intent(this, WinActivity::class.java)
-            startActivity(xat)
-            finish()
-        }
-        generateQuestion()
     }
 
 }
