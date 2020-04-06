@@ -1,0 +1,2 @@
+rootProject.name='MathGo'
+include ':app'

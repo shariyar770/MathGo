@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity"
+    android:background="#1b5e20">
+
+
+    <TextView
+        android:id="@+id/startgametext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:text="Start Game"
+        android:gravity="center_horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:textColor="#fff"
+        />
+
+    <Button
+        android:id="@+id/firstNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@id/startgametext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/belgi"
+        android:layout_marginTop="40dp"
+        android:background="#eeff41"
+        />
+
+
+    <Button
+        android:id="@+id/belgi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@id/startgametext"
+        app:layout_constraintStart_toEndOf="@id/firstNumber"
+        app:layout_constraintEnd_toStartOf="@id/secondNumber"
+        android:layout_marginTop="40dp"
+        android:background="#eeff41"
+        />
+
+    <Button
+        android:id="@+id/secondNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@id/startgametext"
+        app:layout_constraintStart_toEndOf="@id/belgi"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"
+        android:background="#eeff41"
+        />
+
+    <Button
+        android:id="@+id/answer1"
+        android:onClick="onClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/answer2"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="#eeff41"
+        />
+
+    <Button
+        android:id="@+id/answer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/answer1"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="#eeff41"
+        android:onClick="onClick"
+        />
+
+    <Button
+        android:id="@+id/answer3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/answer1"
+        app:layout_constraintEnd_toStartOf="@id/answer4"
+        android:layout_marginTop="20dp"
+        android:background="#eeff41"
+        android:onClick="onClick"
+        />
+
+    <Button
+        android:id="@+id/answer4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@id/answer2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/answer3"
+        android:layout_marginTop="20dp"
+        android:background="#eeff41"
+        android:onClick="onClick"
+        />
+
+
+
+    <Button
+        android:id="@+id/schet_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="#eeff41"
+        android:layout_marginBottom="60dp"
+        />
+
+    <ImageView
+        android:id="@+id/duris"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/duris"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/belgi"
+        android:layout_marginTop="20dp"
+        android:visibility="invisible"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameOverActivity"
+    android:background="#ff80ab">
+
+    <TextView
+        android:id="@+id/utildi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ATTEN' SIZ UTILDINIZ"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="10dp"
+        />
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@drawable/over"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/utildi"
+        android:layout_marginBottom="50dp"
+        />
+
+    <Button
+        android:id="@+id/janabas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Janadan baslaw"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/utildi"
+        android:textSize="25sp"
+        android:layout_marginTop="50dp"
+        android:background="#ad1457"
+        />
+
+    <Button
+        android:id="@+id/shigiw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Oyinnan shigiw"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/janabas"
+        android:textSize="25sp"
+        android:layout_marginTop="10dp"
+        android:background="#ad1457"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
